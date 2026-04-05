@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Kavitha Jewellery </title>
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Kavitha Jewellery Logo" class="logo-img" onerror="this.style.display='none'">
+                <span>KAVITHA <span>JEWELLERY</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#" data-nav="home">Home</a>
+                <a href="#" data-nav="collections">Collections</a>
+                <a href="#" data-nav="gold">Gold</a>
+                <a href="#" data-nav="silver">Silver</a>
+                <div class="user-menu" id="userMenu">
+                    <a href="#" id="loginBtnNav"><i class="fas fa-user"></i> Account</a>
+                    <div class="user-dropdown" id="userDropdown">
+                        <div class="user-info" id="userInfo"></div>
+                        <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </div>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main id="mainContent">
+    <!-- HOME PAGE SECTION -->
+    <div id="homePage">
+        <!-- HERO CAROUSEL SECTION -->
+        <section class="hero-carousel-section">
+            <div class="carousel-container">
+                <div class="carousel-slides" id="carouselSlides">
+                    <!-- Slide 1 - Gold Ring (img5.png) -->
+                    <div class="carousel-slide active">
+                        <div class="carousel-bg"></div>
+                        <div class="carousel-content">
+                            <div class="brand-tag">@kavitha_jewellery</div>
+                            <h2 class="carousel-subtitle">Salfard & Co.</h2>
+                            <h1 class="carousel-title">GOLD RING</h1>
+                            <p class="carousel-desc">Made in pure gold, it is designed to be worn today and treasured forever.</p>
+                            <div class="carousel-buttons">
+                                <a href="#" class="carousel-btn primary" data-nav="collections">Shop Now</a>
+                                <a href="#" class="carousel-btn secondary">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="carousel-image">
+                            <img src="images/img5.png" alt="Salfard & Co. Gold Ring">
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 - Gold Ring Classic (img7.png) -->
+                    <div class="carousel-slide">
+                        <div class="carousel-bg"></div>
+                        <div class="carousel-content">
+                            <div class="brand-tag">@kavitha_jewellery</div>
+                            <h2 class="carousel-subtitle">Salfard & Co.</h2>
+                            <h1 class="carousel-title">GOLD RING</h1>
+                            <p class="carousel-desc">Made in pure gold, it is designed to be worn today and treasured forever. Classic elegance for every occasion.</p>
+                            <div class="carousel-buttons">
+                                <a href="#" class="carousel-btn primary" data-nav="collections">Explore Collection</a>
+                                <a href="#" class="carousel-btn secondary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="carousel-image">
+                            <img src="images/img7.png" alt="Salfard & Co. Classic Gold Ring">
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 - Gold Pendant Collection -->
+                    <div class="carousel-slide">
+                        <div class="carousel-bg"></div>
+                        <div class="carousel-content">
+                            <div class="brand-tag">@kavitha_jewellery</div>
+                            <h2 class="carousel-subtitle">Premium Collection</h2>
+                            <h1 class="carousel-title">Gold Pendant Set</h1>
+                            <p class="carousel-desc">Exquisite gold pendant crafted with grace and devotion. A timeless piece that stays close to the heart forever.</p>
+                            <div class="carousel-buttons">
+                                <a href="#" class="carousel-btn primary" data-nav="collections">Shop Now</a>
+                                <a href="#" class="carousel-btn secondary">Discover More</a>
+                            </div>
+                        </div>
+                        <div class="carousel-image">
+                            <img src="images/img12.png" alt="Gold Pendant Collection">
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4 - Gold Hoop Earrings -->
+                    <div class="carousel-slide">
+                        <div class="carousel-bg"></div>
+                        <div class="carousel-content">
+                            <div class="brand-tag">@kavitha_jewellery</div>
+                            <h2 class="carousel-subtitle">Timeless Beauty</h2>
+                            <h1 class="carousel-title">Gold Hoop Earrings</h1>
+                            <p class="carousel-desc">Golden elegance that whispers timeless beauty. Delicate hoops crowned with a radiant red charm. A perfect blend of tradition and modern grace.</p>
+                            <div class="carousel-buttons">
+                                <a href="#" class="carousel-btn primary" data-nav="collections">View Collection</a>
+                                <a href="#" class="carousel-btn secondary">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="carousel-image">
+                            <img src="images/img13.png" alt="Gold Hoop Earrings">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Navigation Arrows -->
+                <button class="carousel-arrow prev" id="carouselPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-arrow next" id="carouselNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Carousel Dots/Indicators -->
+                <div class="carousel-dots" id="carouselDots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="category-filters" id="categoryFilters">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="rings">Rings</button>
+                <button class="filter-btn" data-category="pendants">Pendants</button>
+                <button class="filter-btn" data-category="earrings">Earrings</button>
+            </div>
+            <h2 class="section-title" id="collectionTitle">Our Signature Collection</h2>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="container">
+            <div class="contact-section">
+                <div class="contact-info">
+                    <h3>✨ Get in Touch</h3>
+                    <p class="contact-subtitle">We'd love to hear from you 💛</p>
+                    <div class="contact-detail"><i class="fas fa-envelope"></i><div><strong>Email Us</strong><br><span>kavitha@gmail.com</span></div></div>
+                    <div class="contact-detail"><i class="fas fa-phone-alt"></i><div><strong>Call / WhatsApp</strong><br><span>+91 81975 68656</span></div></div>
+                    <div class="contact-detail"><i class="fas fa-map-marker-alt"></i><div><strong>Studio Location</strong><br><span>Puttur, Karnataka, India - 574201</span></div></div>
+                    <div class="contact-detail"><i class="fas fa-clock"></i><div><strong>Opening Hours</strong><br><span>Mon - Sat: 10:00 AM - 7:00 PM</span></div></div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <h4>Send us a Message</h4>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <textarea rows="4" placeholder="Tell us about your jewellery needs..."></textarea>
+                        <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCT DETAIL PAGE (Hidden by default) -->
+    <div id="productDetailPage" style="display: none;">
+        <div class="container">
+            <button class="back-to-home" id="backToHomeBtn">
+                <i class="fas fa-arrow-left"></i> Back to Collection
+            </button>
+            <div id="productDetailContent" class="product-detail-container"></div>
+        </div>
+    </div>
+</main>
+
+<footer id="footer">
+    <div class="footer-content">
+        <div class="footer-col"><h4>Kavitha Jewellery</h4><p>Gold & Silver since 2015</p></div>
+        <div class="footer-col"><h4>Quick Links</h4><a href="#" data-nav="collections">Collections</a><a href="#" data-nav="gold">Gold</a><a href="#">Custom Orders</a></div>
+        <div class="footer-col"><h4>Policies</h4><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Privacy</a></div>
+    </div>
+    <p class="copyright">© 2025 Kavitha Jewellery — Where tradition meets contemporary elegance</p>
+</footer>
+
+<!-- Cart Sidebar -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header"><h2><i class="fas fa-shopping-bag"></i> Your Bag</h2><button class="close-cart" id="closeCartBtn">&times;</button></div>
+    <div class="cart-items" id="cartItemsList"><div class="empty-cart-msg">Your jewellery box is empty ✨</div></div>
+    <div class="cart-footer" id="cartFooter" style="display:none;"><div class="total-row"><span>Total</span><span id="cartTotalAmount">₹0</span></div><button class="checkout-btn" id="checkoutBtn">Secure Checkout →</button></div>
+</div>
+
+<!-- Login/Signup Modal -->
+<div class="modal" id="authModal">
+    <div class="modal-content">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <div class="auth-tabs">
+            <button class="auth-tab active" data-auth="login">Login</button>
+            <button class="auth-tab" data-auth="signup">Sign Up</button>
+        </div>
+        <div id="loginForm" class="auth-form active">
+            <h3>Welcome Back</h3>
+            <input type="email" id="loginEmail" placeholder="Email Address" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button id="doLoginBtn">Login</button>
+            <p class="auth-switch">New here? <a href="#" data-switch="signup">Create Account</a></p>
+        </div>
+        <div id="signupForm" class="auth-form">
+            <h3>Create Account</h3>
+            <input type="text" id="signupName" placeholder="Full Name" required>
+            <input type="email" id="signupEmail" placeholder="Email Address" required>
+            <input type="password" id="signupPassword" placeholder="Password" required>
+            <input type="password" id="signupConfirm" placeholder="Confirm Password" required>
+            <button id="doSignupBtn">Sign Up</button>
+            <p class="auth-switch">Already have an account? <a href="#" data-switch="login">Login</a></p>
+        </div>
+    </div>
+</div>
+
+<div id="toastMsg" class="toast-msg">✨ Added to your collection</div>
+
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
